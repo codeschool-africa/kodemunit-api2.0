@@ -1,9 +1,13 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-    name: {
+    firstname: {
         type: String,
         required:true
+    },
+    secondname: {
+        type: String,
+        required: true
     },
     email: {
         type: String,
@@ -22,3 +26,5 @@ const UserSchema = new mongoose.Schema({
         default:Date.now
     }
 })
+
+module.exports = User = mongoose.model('user', UserSchema);

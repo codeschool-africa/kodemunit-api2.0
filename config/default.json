@@ -1,3 +1,4 @@
 {
-    "mongoURL":"mongodb+srv://Justine:zBggaqssoRSM2HVO@cluster0-stbf3.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURL": "mongodb+srv://Justine:zBggaqssoRSM2HVO@cluster0-stbf3.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "My deep secrete"
 }
