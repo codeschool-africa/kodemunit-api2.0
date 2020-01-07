@@ -109,7 +109,7 @@ router.post(
                         to: user.email,
                         subject: "Kodemunit.com Email Confimation",
                             html: `Thank you for Registering with Kodemunit.com <br>
-                        Please click this link to confirm your email address: <a href="http://localhost:5000/api/users/confirmation/${token}">Link</a>`
+                        Please click this link to confirm your email address: <a href="http://kodemunit.herokuapp.com/api/users/confirmation/${token}">Link</a>`
                       },
                       (error) => {
                         if (error) {
