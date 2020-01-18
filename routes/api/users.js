@@ -33,7 +33,7 @@ router.get("/confirmation/:token", async (req, res) => {
             $set: { confirmed: true }
         }, { useFindAndModify: false }
     );
-    res.send(confirmedUser);
+    res.redirect('http://localhost:3000/dashboard');
   } catch (errors) {
     console.log(`Email Confrimation Error ${errors}`);
     res.send("Email confirmation Error");
