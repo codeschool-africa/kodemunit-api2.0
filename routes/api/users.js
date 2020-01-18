@@ -120,7 +120,7 @@ router.post(
           }
         );
         if (err) throw err;
-        res.json({ token });
+        res.json({ msg:"Your account was created successful please check your email for verification" });
       });
     } catch (err) {
       console.error(err.message);
