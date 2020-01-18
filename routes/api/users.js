@@ -26,11 +26,7 @@ let transporter = nodemailer.createTransport({
 router.get("/confirmation/:token", async (req, res) => {
   try {
     const user = jwt.verify(req.params.token, secret);
-    // const {
-    //   user: { id }
-    // } = jwt.verify(req.params.token, secret);
-    // await User.update({ confirmed: true }, { where: { id } });
-      
+
     const confirmedUser = await User.findOneAndUpdate(
       user,
       {
@@ -105,7 +101,9 @@ router.post(
         }
       };
 
+
       jwt.sign(payload, secret, { expiresIn: 2592000 }, (err, token) => {
+       
         transporter.sendMail(
           {
             to: user.email,

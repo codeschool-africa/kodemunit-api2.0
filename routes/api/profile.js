@@ -34,12 +34,12 @@ router.post(
   [
     auth,
     [
-      check('skills', 'Skills is required')
-        .not()
-        .isEmpty(),
-      check('courses', 'Course is required')
-        .not()
-        .isEmpty()
+      // check('skills', 'Skills is required')
+      //   .not()
+      //   .isEmpty(),
+      // check('courses', 'Course is required')
+      //   .not()
+      //   .isEmpty()
     ]
   ],
   async (req, res) => {
