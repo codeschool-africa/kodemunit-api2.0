@@ -101,7 +101,7 @@ router.post(
         }
       };
 
-      jwt.sign(payload, secret, { expiresIn: 3600 }, (err, token) => {
+      jwt.sign(payload, secret, { expiresIn: 2592000 }, (err, token) => {
         transporter.sendMail(
           {
             to: user.email,
